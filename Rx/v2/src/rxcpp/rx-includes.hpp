@@ -216,6 +216,7 @@
 #include "operators/rx-all.hpp"
 #include "operators/rx-amb.hpp"
 #include "operators/rx-any.hpp"
+#include "operators/rx-backpressure_buffer.hpp"
 #include "operators/rx-buffer_count.hpp"
 #include "operators/rx-buffer_time.hpp"
 #include "operators/rx-buffer_time_count.hpp"

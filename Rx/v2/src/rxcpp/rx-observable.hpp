@@ -958,6 +958,17 @@ public:
         return  observable_member(buffer_count_tag{},                *this, std::forward<AN>(an)...);
     }
 
+	/*! @copydoc rx-backpressure_buffer.hpp
+	 */
+	template<class... AN>
+	auto backpressure_buffer(AN&&... an) const
+	/// \cond SHOW_SERVICE_MEMBERS
+	-> decltype(observable_member(backpressure_buffer_tag{}, *(this_type*)nullptr, std::forward<AN>(an)...))
+	/// \endcond
+	{
+		return  observable_member(backpressure_buffer_tag{},                *this, std::forward<AN>(an)...);
+	}
+
     /*! @copydoc rx-buffer_time.hpp
      */
     template<class... AN>

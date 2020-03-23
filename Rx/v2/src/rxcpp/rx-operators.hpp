@@ -126,6 +126,13 @@ struct any_tag {
 struct exists_tag : any_tag {};
 struct contains_tag : any_tag {};
 
+struct backpressure_buffer_tag {
+	template<class Included>
+	struct include_header{
+		static_assert(Included::value, "missing include: please #include <rxcpp/operators/rx-backpressure_buffer.hpp>");
+	};
+};
+
 struct buffer_count_tag {
     template<class Included>
     struct include_header{
